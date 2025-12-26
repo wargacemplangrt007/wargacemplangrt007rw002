@@ -10,44 +10,74 @@
 
 <header>
   <h1>Website Resmi Warga Cemplang</h1>
-  <p>RT 007 RW 002<br>
-     Kecamatan Cibungbulang<br>
-     Kabupaten Bogor 16630
-  </p>
+  <p>RT 007 RW 002 · Kecamatan Cibungbulang · Kabupaten Bogor 16630</p>
 </header>
 
 <nav>
   <a href="#pengumuman">Pengumuman</a>
-  <a href="#struktur">Struktur RT</a>
+  <a href="#struktur">Pengurus</a>
   <a href="#galeri">Galeri</a>
-  <a href="#laporan">Laporan Warga</a>
+  <a href="#jadwal">Jadwal</a>
+  <a href="#kas">Kas RT</a>
+  <a href="#laporan">Laporan</a>
 </nav>
 
-<section id="pengumuman">
-  <h2>📢 Pengumuman RT</h2>
-  <ul>
-    <li>Kerja bakti rutin setiap hari Minggu</li>
-    <li>Rapat warga bulanan di balai RT</li>
-    <li>Mari jaga keamanan & kebersihan lingkungan</li>
-  </ul>
+<section id="jadwal">
+  <h2>📅 Jadwal Kegiatan RT</h2>
+
+  <table>
+    <tr>
+      <th>Tanggal</th>
+      <th>Kegiatan</th>
+      <th>Tempat</th>
+    </tr>
+    <tr>
+      <td>Setiap Minggu</td>
+      <td>Kerja Bakti</td>
+      <td>Lingkungan RT</td>
+    </tr>
+    <tr>
+      <td>10 Februari 2025</td>
+      <td>Rapat Warga</td>
+      <td>Balai RT</td>
+    </tr>
+    <tr>
+      <td>Setiap Jumat</td>
+      <td>Pengajian</td>
+      <td>Masjid</td>
+    </tr>
+  </table>
 </section>
 
-<section id="struktur">
-  <h2>🏛️ Struktur Pengurus RT</h2>
-  <div class="card">Ketua RT<br><b>Bapak ……………</b></div>
-  <div class="card">Sekretaris<br><b>Bapak/Ibu ………</b></div>
-  <div class="card">Bendahara<br><b>Bapak/Ibu ………</b></div>
-  <div class="card">Humas<br><b>Bapak/Ibu ………</b></div>
-</section>
+<section id="kas">
+  <h2>💰 Laporan Kas RT</h2>
 
-<section id="galeri">
-  <h2>📸 Galeri Kegiatan</h2>
-  <div class="gallery">
-    <div class="photo"><img src="https://via.placeholder.com/300x200?text=Kerja+Bakti"><p>Kerja Bakti</p></div>
-    <div class="photo"><img src="https://via.placeholder.com/300x200?text=17+Agustus"><p>17 Agustus</p></div>
-    <div class="photo"><img src="https://via.placeholder.com/300x200?text=Pengajian"><p>Pengajian</p></div>
-    <div class="photo"><img src="https://via.placeholder.com/300x200?text=Ronda+Malam"><p>Ronda Malam</p></div>
-  </div>
+  <table>
+    <tr>
+      <th>Tanggal</th>
+      <th>Keterangan</th>
+      <th>Masuk</th>
+      <th>Keluar</th>
+    </tr>
+    <tr>
+      <td>01 Feb 2025</td>
+      <td>Iuran Warga</td>
+      <td>Rp 500.000</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>05 Feb 2025</td>
+      <td>Kebersihan</td>
+      <td>-</td>
+      <td>Rp 150.000</td>
+    </tr>
+    <tr>
+      <td>10 Feb 2025</td>
+      <td>Alat Kerja Bakti</td>
+      <td>-</td>
+      <td>Rp 100.000</td>
+    </tr>
+  </table>
 </section>
 
 <section id="laporan">
@@ -55,7 +85,7 @@
 
   <form onsubmit="kirimWA(); return false;">
     <input type="text" id="nama" placeholder="Nama Warga" required>
-    <textarea id="pesan" placeholder="Isi laporan atau aspirasi" required></textarea>
+    <textarea id="pesan" placeholder="Isi laporan / aspirasi" required></textarea>
     <button type="submit">Kirim ke Ketua RT</button>
   </form>
 </section>
@@ -69,12 +99,11 @@ function kirimWA() {
   var nama = document.getElementById("nama").value;
   var pesan = document.getElementById("pesan").value;
 
-  var url = "https://wa.me/6285717230571?text="
-    + encodeURIComponent(
-      "Assalamu'alaikum Pak RT,\n\n"
-      + "Nama: " + nama + "\n"
-      + "Laporan/Aspirasi:\n" + pesan
-      + "\n\nTerima kasih."
+  var url = "https://wa.me/6285717230571?text=" +
+    encodeURIComponent(
+      "Assalamu'alaikum Pak RT,\n\n" +
+      "Nama: " + nama + "\n" +
+      "Laporan:\n" + pesan
     );
 
   window.open(url, "_blank");
