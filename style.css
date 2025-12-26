@@ -1,76 +1,131 @@
-body {
-  font-family: Arial, sans-serif;
+/* RESET */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+body {
   background: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* HEADER */
 header {
-  background: #0d47a1;
-  color: white;
+  background: #0b5ed7;
+  color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 30px 15px;
 }
 
+header h1 {
+  font-size: 24px;
+}
+
+header p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* NAV */
 nav {
-  background: #1565c0;
-  padding: 10px;
-  text-align: center;
+  background: #084298;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav a {
-  color: white;
-  margin: 0 8px;
+  color: #fff;
+  padding: 12px 16px;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 14px;
 }
 
+nav a:hover {
+  background: #0b5ed7;
+}
+
+/* SECTION */
 section {
+  background: #fff;
+  margin: 15px;
   padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+section h2 {
+  margin-bottom: 10px;
+  color: #0b5ed7;
+}
+
+/* LIST */
+ul {
+  padding-left: 20px;
+}
+
+/* TABLE */
 table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
 }
 
 table th {
-  background: #e3f2fd;
+  background: #0b5ed7;
+  color: #fff;
 }
 
-table th, table td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
-}
-
-form {
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-form button {
+/* BUTTON WHATSAPP */
+.btn-wa {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 20px;
   background: #25d366;
-  color: white;
-  border: none;
-  padding: 12px;
-  width: 100%;
-  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
   border-radius: 6px;
+  font-weight: bold;
 }
 
+.btn-wa:hover {
+  background: #1ebd5a;
+}
+
+/* FOOTER */
 footer {
-  background: #0d47a1;
-  color: white;
+  background: #084298;
+  color: #fff;
   text-align: center;
   padding: 15px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  table {
+    font-size: 12px;
+  }
 }
