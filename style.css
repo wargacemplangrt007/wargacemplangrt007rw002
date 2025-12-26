@@ -1,4 +1,6 @@
-/* RESET */
+/* =====================
+   RESET & DASAR
+===================== */
 * {
   margin: 0;
   padding: 0;
@@ -6,16 +8,17 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* BODY */
 body {
   background: #f4f6f8;
   color: #333;
   line-height: 1.6;
 }
 
-/* HEADER */
+/* =====================
+   HEADER
+===================== */
 header {
-  background: #0b5ed7;
+  background: linear-gradient(135deg, #0b5ed7, #084298);
   color: #fff;
   text-align: center;
   padding: 30px 15px;
@@ -26,11 +29,13 @@ header h1 {
 }
 
 header p {
-  margin-top: 5px;
   font-size: 14px;
+  margin-top: 5px;
 }
 
-/* NAV */
+/* =====================
+   NAVIGASI
+===================== */
 nav {
   background: #084298;
   display: flex;
@@ -43,36 +48,47 @@ nav a {
   padding: 12px 16px;
   text-decoration: none;
   font-size: 14px;
+  transition: background 0.3s;
 }
 
 nav a:hover {
   background: #0b5ed7;
 }
 
-/* SECTION */
+/* =====================
+   SECTION
+===================== */
 section {
   background: #fff;
   margin: 15px;
   padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 section h2 {
-  margin-bottom: 10px;
   color: #0b5ed7;
+  margin-bottom: 12px;
 }
 
-/* LIST */
+/* =====================
+   LIST
+===================== */
 ul {
   padding-left: 20px;
 }
 
-/* TABLE */
+ul li {
+  margin-bottom: 6px;
+}
+
+/* =====================
+   TABEL (JADWAL & KAS)
+===================== */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 15px;
+  margin-top: 12px;
   font-size: 14px;
 }
 
@@ -88,23 +104,56 @@ table th {
   color: #fff;
 }
 
-/* BUTTON WHATSAPP */
+/* =====================
+   GALERI FOTO
+===================== */
+.galeri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.foto {
+  text-align: center;
+}
+
+.foto img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.foto p {
+  margin-top: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* =====================
+   TOMBOL WHATSAPP
+===================== */
 .btn-wa {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 12px;
   padding: 12px 20px;
   background: #25d366;
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
+  transition: background 0.3s;
 }
 
 .btn-wa:hover {
   background: #1ebd5a;
 }
 
-/* FOOTER */
+/* =====================
+   FOOTER
+===================== */
 footer {
   background: #084298;
   color: #fff;
@@ -114,7 +163,9 @@ footer {
   font-size: 14px;
 }
 
-/* RESPONSIVE */
+/* =====================
+   RESPONSIVE (HP)
+===================== */
 @media (max-width: 600px) {
   header h1 {
     font-size: 20px;
@@ -127,5 +178,9 @@ footer {
 
   table {
     font-size: 12px;
+  }
+
+  .foto img {
+    height: 120px;
   }
 }
