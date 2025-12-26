@@ -20,7 +20,7 @@
   <a href="#pengumuman">Pengumuman</a>
   <a href="#struktur">Struktur RT</a>
   <a href="#galeri">Galeri</a>
-  <a href="#kontak">Kontak</a>
+  <a href="#laporan">Laporan Warga</a>
 </nav>
 
 <section id="pengumuman">
@@ -34,51 +34,52 @@
 
 <section id="struktur">
   <h2>🏛️ Struktur Pengurus RT</h2>
-
-  <div class="card">Ketua RT<br><b>Bapak ……………………</b></div>
-  <div class="card">Sekretaris<br><b>Bapak/Ibu ……………</b></div>
-  <div class="card">Bendahara<br><b>Bapak/Ibu ……………</b></div>
-  <div class="card">Humas<br><b>Bapak/Ibu ……………</b></div>
+  <div class="card">Ketua RT<br><b>Bapak ……………</b></div>
+  <div class="card">Sekretaris<br><b>Bapak/Ibu ………</b></div>
+  <div class="card">Bendahara<br><b>Bapak/Ibu ………</b></div>
+  <div class="card">Humas<br><b>Bapak/Ibu ………</b></div>
 </section>
 
 <section id="galeri">
-  <h2>📸 Galeri Kegiatan Warga</h2>
-
+  <h2>📸 Galeri Kegiatan</h2>
   <div class="gallery">
-    <div class="photo">
-      <img src="https://via.placeholder.com/300x200?text=Kerja+Bakti">
-      <p>Kerja Bakti</p>
-    </div>
-
-    <div class="photo">
-      <img src="https://via.placeholder.com/300x200?text=17+Agustus">
-      <p>Perayaan 17 Agustus</p>
-    </div>
-
-    <div class="photo">
-      <img src="https://via.placeholder.com/300x200?text=Pengajian">
-      <p>Pengajian</p>
-    </div>
-
-    <div class="photo">
-      <img src="https://via.placeholder.com/300x200?text=Ronda+Malam">
-      <p>Ronda Malam</p>
-    </div>
+    <div class="photo"><img src="https://via.placeholder.com/300x200?text=Kerja+Bakti"><p>Kerja Bakti</p></div>
+    <div class="photo"><img src="https://via.placeholder.com/300x200?text=17+Agustus"><p>17 Agustus</p></div>
+    <div class="photo"><img src="https://via.placeholder.com/300x200?text=Pengajian"><p>Pengajian</p></div>
+    <div class="photo"><img src="https://via.placeholder.com/300x200?text=Ronda+Malam"><p>Ronda Malam</p></div>
   </div>
 </section>
 
-<section id="kontak">
-  <h2>📞 Kontak</h2>
-  <a class="btn-wa"
-     href="https://wa.me/6285717230571?text=Assalamu'alaikum%20Pak%20RT.%20Saya%20warga%20RT%20007%20RW%20002."
-     target="_blank">
-     Hubungi Ketua RT
-  </a>
+<section id="laporan">
+  <h2>📝 Laporan / Aspirasi Warga</h2>
+
+  <form onsubmit="kirimWA(); return false;">
+    <input type="text" id="nama" placeholder="Nama Warga" required>
+    <textarea id="pesan" placeholder="Isi laporan atau aspirasi" required></textarea>
+    <button type="submit">Kirim ke Ketua RT</button>
+  </form>
 </section>
 
 <footer>
   <p>© 2025 Warga Cemplang RT 007 RW 002</p>
 </footer>
+
+<script>
+function kirimWA() {
+  var nama = document.getElementById("nama").value;
+  var pesan = document.getElementById("pesan").value;
+
+  var url = "https://wa.me/6285717230571?text="
+    + encodeURIComponent(
+      "Assalamu'alaikum Pak RT,\n\n"
+      + "Nama: " + nama + "\n"
+      + "Laporan/Aspirasi:\n" + pesan
+      + "\n\nTerima kasih."
+    );
+
+  window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
