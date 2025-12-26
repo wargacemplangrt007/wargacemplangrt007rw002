@@ -8,124 +8,82 @@
 </head>
 <body>
 
-<header>
-  <h1>Website Resmi Warga Cemplang</h1>
-  <p>RT 007 RW 002 · Cibungbulang · Bogor 16630</p>
+<header class="top-header">
+  <div class="logo">
+    <h1>RT 007 RW 002</h1>
+    <p>Kampung Cemplang · Kecamatan Cibungbulang · Bogor 16630</p>
+  </div>
 </header>
 
-<nav>
+<nav class="main-nav">
+  <a href="#beranda">Beranda</a>
   <a href="#pengumuman">Pengumuman</a>
-  <a href="#struktur">Struktur</a>
-  <a href="#jadwal">Jadwal</a>
-  <a href="#kas">Kas RT</a>
+  <a href="#struktur">Pengurus</a>
   <a href="#galeri">Galeri</a>
   <a href="#kontak">Kontak</a>
 </nav>
 
-<section id="pengumuman">
+<!-- HERO -->
+<section id="beranda" class="hero">
+  <div class="hero-text">
+    <h2>Website Resmi Warga</h2>
+    <h3>RT 007 RW 002 Kampung Cemplang</h3>
+    <p>Media informasi, komunikasi, dan dokumentasi kegiatan warga</p>
+  </div>
+</section>
+
+<section id="pengumuman" class="card">
   <h2>📢 Pengumuman RT</h2>
   <ul>
     <li>Kerja bakti Minggu pukul 07.00 WIB</li>
-    <li>Ronda malam bergilir</li>
-    <li>Mohon menjaga kebersihan lingkungan</li>
+    <li>Ronda malam bergilir setiap hari</li>
+    <li>Rapat warga bulanan di balai RT</li>
   </ul>
 </section>
 
-<section id="struktur">
+<section id="struktur" class="card">
   <h2>🏛️ Struktur Pengurus RT</h2>
-  <p><strong>Ketua RT:</strong> Bapak .................</p>
-  <p><strong>Sekretaris:</strong> Bapak/Ibu .................</p>
-  <p><strong>Bendahara:</strong> Bapak/Ibu .................</p>
-  <p><strong>Humas:</strong> Bapak/Ibu .................</p>
+  <div class="grid-2">
+    <p><strong>Ketua RT</strong><br>Bapak ..............</p>
+    <p><strong>Sekretaris</strong><br>Bapak/Ibu ..............</p>
+    <p><strong>Bendahara</strong><br>Bapak/Ibu ..............</p>
+    <p><strong>Humas</strong><br>Bapak/Ibu ..............</p>
+  </div>
 </section>
 
-<section id="jadwal">
-  <h2>📅 Jadwal Kegiatan</h2>
-  <table>
-    <tr>
-      <th>Kegiatan</th>
-      <th>Hari</th>
-      <th>Waktu</th>
-    </tr>
-    <tr>
-      <td>Kerja Bakti</td>
-      <td>Minggu</td>
-      <td>07.00 WIB</td>
-    </tr>
-    <tr>
-      <td>Ronda Malam</td>
-      <td>Setiap Hari</td>
-      <td>22.00 WIB</td>
-    </tr>
-    <tr>
-      <td>Pengajian</td>
-      <td>Jumat</td>
-      <td>19.30 WIB</td>
-    </tr>
-  </table>
-</section>
-
-<section id="kas">
-  <h2>💰 Kas RT</h2>
-  <table>
-    <tr>
-      <th>Bulan</th>
-      <th>Pemasukan</th>
-      <th>Pengeluaran</th>
-      <th>Saldo</th>
-    </tr>
-    <tr>
-      <td>Januari</td>
-      <td>Rp 500.000</td>
-      <td>Rp 200.000</td>
-      <td>Rp 300.000</td>
-    </tr>
-    <tr>
-      <td>Februari</td>
-      <td>Rp 400.000</td>
-      <td>Rp 150.000</td>
-      <td>Rp 550.000</td>
-    </tr>
-  </table>
-</section>
-
-<section id="galeri">
-  <h2>📸 Galeri Kegiatan Warga</h2>
-
+<section id="galeri" class="card">
+  <h2>📸 Galeri Kegiatan</h2>
   <div class="galeri">
     <div class="foto">
-      <img src="https://picsum.photos/400/300?1" alt="Kerja Bakti">
+      <img src="https://picsum.photos/400/300?10">
       <p>Kerja Bakti</p>
     </div>
-
     <div class="foto">
-      <img src="https://picsum.photos/400/300?2" alt="17 Agustus">
+      <img src="https://picsum.photos/400/300?11">
       <p>17 Agustus</p>
     </div>
-
     <div class="foto">
-      <img src="https://picsum.photos/400/300?3" alt="Pengajian">
+      <img src="https://picsum.photos/400/300?12">
       <p>Pengajian</p>
     </div>
-
     <div class="foto">
-      <img src="https://picsum.photos/400/300?4" alt="Ronda Malam">
+      <img src="https://picsum.photos/400/300?13">
       <p>Ronda Malam</p>
     </div>
   </div>
 </section>
 
-<section id="kontak">
-  <h2>📞 Kontak</h2>
+<section id="kontak" class="card kontak">
+  <h2>📞 Kontak Ketua RT</h2>
   <a class="btn-wa"
      href="https://wa.me/6285717230571?text=Assalamu'alaikum%20Pak%20RT"
      target="_blank">
-     Hubungi Ketua RT
+     Hubungi via WhatsApp
   </a>
 </section>
 
 <footer>
-  <p>© 2025 Warga Cemplang RT 007 RW 002</p>
+  <p>© 2025 Warga Cemplang RT 007 RW 002 · Kecamatan Cibungbulang · Kabupaten Bogor</p>
 </footer>
 
 </body>
