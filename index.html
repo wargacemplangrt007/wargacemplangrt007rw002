@@ -10,105 +10,98 @@
 
 <header>
   <h1>Website Resmi Warga Cemplang</h1>
-  <p>RT 007 RW 002 · Kecamatan Cibungbulang · Kabupaten Bogor 16630</p>
+  <p>RT 007 RW 002 · Cibungbulang · Bogor 16630</p>
 </header>
 
 <nav>
   <a href="#pengumuman">Pengumuman</a>
-  <a href="#struktur">Pengurus</a>
-  <a href="#galeri">Galeri</a>
+  <a href="#struktur">Struktur</a>
   <a href="#jadwal">Jadwal</a>
   <a href="#kas">Kas RT</a>
-  <a href="#laporan">Laporan</a>
+  <a href="#kontak">Kontak</a>
 </nav>
 
+<section id="pengumuman">
+  <h2>📢 Pengumuman RT</h2>
+  <ul>
+    <li>Kerja bakti Minggu pukul 07.00 WIB</li>
+    <li>Ronda malam bergilir</li>
+    <li>Mohon jaga kebersihan lingkungan</li>
+  </ul>
+</section>
+
+<section id="struktur">
+  <h2>🏛️ Struktur Pengurus RT</h2>
+  <p><strong>Ketua RT:</strong> Bapak .................</p>
+  <p><strong>Sekretaris:</strong> Bapak/Ibu .................</p>
+  <p><strong>Bendahara:</strong> Bapak/Ibu .................</p>
+  <p><strong>Humas:</strong> Bapak/Ibu .................</p>
+</section>
+
 <section id="jadwal">
-  <h2>📅 Jadwal Kegiatan RT</h2>
+  <h2>📅 Jadwal Kegiatan Warga</h2>
 
   <table>
     <tr>
-      <th>Tanggal</th>
       <th>Kegiatan</th>
-      <th>Tempat</th>
+      <th>Hari</th>
+      <th>Waktu</th>
     </tr>
     <tr>
-      <td>Setiap Minggu</td>
       <td>Kerja Bakti</td>
-      <td>Lingkungan RT</td>
+      <td>Minggu</td>
+      <td>07.00 WIB</td>
     </tr>
     <tr>
-      <td>10 Februari 2025</td>
-      <td>Rapat Warga</td>
-      <td>Balai RT</td>
+      <td>Ronda Malam</td>
+      <td>Setiap Hari</td>
+      <td>22.00 WIB</td>
     </tr>
     <tr>
-      <td>Setiap Jumat</td>
       <td>Pengajian</td>
-      <td>Masjid</td>
+      <td>Jumat</td>
+      <td>19.30 WIB</td>
     </tr>
   </table>
 </section>
 
 <section id="kas">
-  <h2>💰 Laporan Kas RT</h2>
+  <h2>💰 Kas RT</h2>
 
   <table>
     <tr>
-      <th>Tanggal</th>
-      <th>Keterangan</th>
-      <th>Masuk</th>
-      <th>Keluar</th>
+      <th>Bulan</th>
+      <th>Pemasukan</th>
+      <th>Pengeluaran</th>
+      <th>Saldo</th>
     </tr>
     <tr>
-      <td>01 Feb 2025</td>
-      <td>Iuran Warga</td>
+      <td>Januari</td>
       <td>Rp 500.000</td>
-      <td>-</td>
+      <td>Rp 200.000</td>
+      <td>Rp 300.000</td>
     </tr>
     <tr>
-      <td>05 Feb 2025</td>
-      <td>Kebersihan</td>
-      <td>-</td>
+      <td>Februari</td>
+      <td>Rp 400.000</td>
       <td>Rp 150.000</td>
-    </tr>
-    <tr>
-      <td>10 Feb 2025</td>
-      <td>Alat Kerja Bakti</td>
-      <td>-</td>
-      <td>Rp 100.000</td>
+      <td>Rp 550.000</td>
     </tr>
   </table>
 </section>
 
-<section id="laporan">
-  <h2>📝 Laporan / Aspirasi Warga</h2>
-
-  <form onsubmit="kirimWA(); return false;">
-    <input type="text" id="nama" placeholder="Nama Warga" required>
-    <textarea id="pesan" placeholder="Isi laporan / aspirasi" required></textarea>
-    <button type="submit">Kirim ke Ketua RT</button>
-  </form>
+<section id="kontak">
+  <h2>📞 Kontak</h2>
+  <a class="btn-wa"
+     href="https://wa.me/6285717230571?text=Assalamu'alaikum%20Pak%20RT"
+     target="_blank">
+     Hubungi Ketua RT
+  </a>
 </section>
 
 <footer>
   <p>© 2025 Warga Cemplang RT 007 RW 002</p>
 </footer>
-
-<script>
-function kirimWA() {
-  var nama = document.getElementById("nama").value;
-  var pesan = document.getElementById("pesan").value;
-
-  var url = "https://wa.me/6285717230571?text=" +
-    encodeURIComponent(
-      "Assalamu'alaikum Pak RT,\n\n" +
-      "Nama: " + nama + "\n" +
-      "Laporan:\n" + pesan
-    );
-
-  window.open(url, "_blank");
-}
-</script>
 
 </body>
 </html>
