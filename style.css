@@ -52,7 +52,6 @@ section {
 
 .photo img {
   width: 100%;
-  display: block;
 }
 
 .photo p {
@@ -60,14 +59,27 @@ section {
   font-weight: bold;
 }
 
-.btn-wa {
-  display: inline-block;
+form {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+form button {
   background: #25d366;
   color: white;
-  padding: 15px 20px;
-  border-radius: 8px;
-  text-decoration: none;
+  border: none;
+  padding: 12px;
   font-weight: bold;
+  width: 100%;
+  border-radius: 6px;
 }
 
 footer {
