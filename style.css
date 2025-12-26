@@ -13,13 +13,13 @@ header {
 
 nav {
   background: #1565c0;
-  text-align: center;
   padding: 10px;
+  text-align: center;
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
+  margin: 0 8px;
   text-decoration: none;
   font-weight: bold;
 }
@@ -28,35 +28,21 @@ section {
   padding: 20px;
 }
 
-.card {
-  background: white;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-}
-
-.photo {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.photo img {
+table {
   width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.photo p {
+table th {
+  background: #e3f2fd;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
   padding: 10px;
-  font-weight: bold;
+  text-align: left;
 }
 
 form {
@@ -77,14 +63,14 @@ form button {
   color: white;
   border: none;
   padding: 12px;
-  font-weight: bold;
   width: 100%;
+  font-weight: bold;
   border-radius: 6px;
 }
 
 footer {
-  text-align: center;
-  padding: 15px;
   background: #0d47a1;
   color: white;
+  text-align: center;
+  padding: 15px;
 }
