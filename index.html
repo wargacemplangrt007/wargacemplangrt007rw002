@@ -1,3 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warga Cemplang RT 007 RW 002</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top-header">
+  <div class="logo">
+    <h1>RT 007 RW 002</h1>
+    <p>Kp. Cemplang · Kecamatan Cibungbulang · Kabupaten Bogor 16630</p>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <a href="#beranda">Beranda</a>
+  <a href="#pengumuman">Pengumuman</a>
+  <a href="#struktur">Pengurus</a>
+  <a href="#galeri">Galeri</a>
+  <a href="#kontak">Kontak</a>
+</nav>
+
+<section id="beranda" class="hero">
+  <div class="hero-text">
+    <h2>Website Resmi Warga</h2>
+    <h3>RT 007 RW 002 Cemplang – Cibungbulang</h3>
+    <p>Media informasi, komunikasi, dan dokumentasi kegiatan warga</p>
+  </div>
+</section>
+
 <section id="pengumuman" class="card">
   <h2>📢 Pengumuman RT</h2>
   <div id="pengumuman-list">
@@ -5,33 +38,39 @@
   </div>
 </section>
 
-<script>
-const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRxp9RzXU7MNibquVZ6wYj6s6zzyySpmF6IG5OGNg5UTp_dkMnAHF3JIDGLbxnW2V8J9Oew1s3xu3-7/pub?gid=2066435369&single=true&output=csv";
+<section id="struktur" class="card">
+  <h2>🏛️ Struktur Pengurus RT</h2>
+  <div class="grid-2">
+    <p><strong>Ketua RT</strong><br>Ibu Mela Nurlaela</p>
+    <p><strong>Sekretaris</strong><br>Bapak Ahmad Haetami</p>
+    <p><strong>Bendahara</strong><br>Bapak Miftahuddin</p>
+    <p><strong>Humas</strong><br>Bapak Agus Mulyana</p>
+  </div>
+</section>
 
-fetch(sheetURL)
-  .then(response => response.text())
-  .then(data => {
-    const rows = data.split("\n").slice(1);
-    let html = "<ul>";
+<section id="galeri" class="card">
+  <h2>📸 Galeri Kegiatan</h2>
+  <div class="galeri">
+    <div class="foto"><img src="https://picsum.photos/400/300?1"><p>Kerja Bakti</p></div>
+    <div class="foto"><img src="https://picsum.photos/400/300?2"><p>17 Agustus</p></div>
+    <div class="foto"><img src="https://picsum.photos/400/300?3"><p>Pengajian</p></div>
+    <div class="foto"><img src="https://picsum.photos/400/300?4"><p>Ronda Malam</p></div>
+  </div>
+</section>
 
-    rows.reverse().forEach(row => {
-      const cols = row.split(",");
-      if (cols.length >= 4) {
-        html += `
-          <li>
-            <strong>${cols[1]}</strong><br>
-            <small>${cols[2]}</small><br>
-            ${cols[3]}
-          </li><br>
-        `;
-      }
-    });
+<section id="kontak" class="card kontak">
+  <h2>📞 Kontak Ketua RT</h2>
+  <a class="btn-wa"
+     href="https://wa.me/6285717230571"
+     target="_blank">
+     Hubungi via WhatsApp
+  </a>
+</section>
 
-    html += "</ul>";
-    document.getElementById("pengumuman-list").innerHTML = html;
-  })
-  .catch(() => {
-    document.getElementById("pengumuman-list").innerHTML =
-      "<p>Gagal memuat pengumuman.</p>";
-  });
-</script>
+<footer>
+  <p>© 2025 Warga Cemplang RT 007 RW 002 · Kecamatan Cibungbulang · Kabupaten Bogor</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
