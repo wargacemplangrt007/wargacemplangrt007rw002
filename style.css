@@ -1,152 +1,87 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
 body {
-  background: #f2f4f7;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
   color: #333;
 }
 
-/* HEADER */
 .top-header {
-  background: linear-gradient(135deg, #0b5ed7, #084298);
+  background: #0f766e;
   color: #fff;
-  padding: 25px 15px;
   text-align: center;
+  padding: 20px;
 }
 
-.top-header h1 {
-  font-size: 26px;
-}
-
-.top-header p {
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-/* NAV */
 .main-nav {
-  background: #06357a;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  background: #134e4a;
+  flex-wrap: wrap;
 }
 
 .main-nav a {
   color: #fff;
-  padding: 12px 18px;
+  padding: 12px 16px;
   text-decoration: none;
-  font-size: 14px;
 }
 
 .main-nav a:hover {
-  background: #0b5ed7;
+  background: #0d9488;
 }
 
-/* HERO */
 .hero {
-  background: url("https://picsum.photos/1200/500?government") center/cover no-repeat;
-  height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-text {
-  background: rgba(0,0,0,0.55);
-  color: #fff;
-  padding: 20px;
-  border-radius: 8px;
+  background: linear-gradient(120deg, #0f766e, #14b8a6);
+  color: white;
+  padding: 60px 20px;
   text-align: center;
 }
 
-.hero-text h2 {
-  font-size: 24px;
-}
-
-.hero-text h3 {
-  font-size: 18px;
-  margin-top: 5px;
-}
-
-/* CARD */
 .card {
-  background: #fff;
-  margin: 18px;
+  background: white;
+  margin: 20px;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
-.card h2 {
-  color: #0b5ed7;
-  margin-bottom: 12px;
-}
-
-/* GRID */
 .grid-2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
   gap: 15px;
 }
 
-/* GALERI */
 .galeri {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
   gap: 15px;
 }
 
-.foto img {
+.galeri img {
   width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
-.foto p {
-  text-align: center;
-  margin-top: 6px;
-  font-weight: bold;
-}
-
-/* WHATSAPP */
 .kontak {
   text-align: center;
 }
 
 .btn-wa {
   display: inline-block;
-  margin-top: 12px;
-  padding: 12px 24px;
-  background: #25d366;
-  color: #fff;
-  text-decoration: none;
+  background: #25D366;
+  color: white;
+  padding: 12px 20px;
   border-radius: 30px;
+  text-decoration: none;
   font-weight: bold;
 }
 
-/* FOOTER */
-footer {
-  background: #06357a;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-  font-size: 14px;
+.pengumuman-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .hero {
-    height: 220px;
-  }
-
-  .hero-text h2 {
-    font-size: 20px;
-  }
+footer {
+  background: #134e4a;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
