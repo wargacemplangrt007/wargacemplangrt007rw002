@@ -1,13 +1,13 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f6f8;
+  background: #f2f2f2;
   color: #333;
 }
 
 .top-header {
-  background: #0f766e;
-  color: #fff;
+  background: #1e3a8a;
+  color: white;
   text-align: center;
   padding: 20px;
 }
@@ -15,49 +15,43 @@ body {
 .main-nav {
   display: flex;
   justify-content: center;
-  background: #134e4a;
-  flex-wrap: wrap;
+  gap: 15px;
+  background: #2563eb;
+  padding: 10px;
 }
 
 .main-nav a {
-  color: #fff;
-  padding: 12px 16px;
+  color: white;
   text-decoration: none;
-}
-
-.main-nav a:hover {
-  background: #0d9488;
+  font-weight: bold;
 }
 
 .hero {
-  background: linear-gradient(120deg, #0f766e, #14b8a6);
-  color: white;
-  padding: 60px 20px;
+  padding: 40px 20px;
   text-align: center;
+  background: white;
 }
 
 .card {
   background: white;
   margin: 20px;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
-  gap: 15px;
+.struktur li {
+  margin-bottom: 8px;
 }
 
 .galeri {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
 }
 
 .galeri img {
   width: 100%;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .kontak {
@@ -66,22 +60,17 @@ body {
 
 .btn-wa {
   display: inline-block;
-  background: #25D366;
+  background: #25d366;
   color: white;
   padding: 12px 20px;
-  border-radius: 30px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
 }
 
-.pengumuman-item {
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-}
-
 footer {
-  background: #134e4a;
-  color: white;
   text-align: center;
   padding: 15px;
+  background: #1e3a8a;
+  color: white;
 }
