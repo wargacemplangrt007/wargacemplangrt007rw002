@@ -1,1 +1,1 @@
-console.log("Website Warga Cemplang RT 007 RW 002 aktif");
+console.log("Website RT 007 RW 002 Cemplang aktif");
