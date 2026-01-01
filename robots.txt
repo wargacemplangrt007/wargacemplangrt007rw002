@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wargacemplangrt007.github.io/wargacemplangrt007rw002/sitemap.xml
