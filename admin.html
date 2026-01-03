@@ -71,9 +71,57 @@
       margin-bottom: 20px;
       font-size: 14px;
     }
+
+    /* LOGIN */
+    #login-box {
+      max-width: 400px;
+      margin: 100px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    #login-box input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    #login-box button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #login-box button:hover {
+      background: #1d4ed8;
+    }
+
+    #admin-content {
+      display: none;
+    }
   </style>
 </head>
 <body>
+
+<!-- LOGIN -->
+<div id="login-box">
+  <h2>🔐 Login Admin RT</h2>
+  <p>Masukkan password admin</p>
+  <input type="password" id="password" placeholder="Password admin">
+  <button onclick="login()">Masuk</button>
+</div>
+
+<!-- ADMIN CONTENT -->
+<div id="admin-content">
 
 <header>
   <h1>Halaman Admin RT</h1>
@@ -84,12 +132,11 @@
 
   <div class="warning">
     ⚠️ <strong>Halaman ini hanya untuk pengurus RT.</strong><br>
-    Jangan membagikan link admin kepada warga umum.
+    Jangan membagikan password admin kepada warga umum.
   </div>
 
   <div class="card">
     <h2>📢 Kelola Pengumuman RT</h2>
-    <p>Gunakan Google Form untuk menambah pengumuman baru.</p>
     <a class="btn" href="PASTE_LINK_GOOGLE_FORM_DI_SINI" target="_blank">
       Buka Form Pengumuman RT
     </a>
@@ -97,7 +144,6 @@
 
   <div class="card">
     <h2>📊 Data Pengumuman (Spreadsheet)</h2>
-    <p>Lihat dan edit data pengumuman RT.</p>
     <a class="btn" href="PASTE_LINK_GOOGLE_SHEET_DI_SINI" target="_blank">
       Buka Google Spreadsheet
     </a>
@@ -105,7 +151,6 @@
 
   <div class="card">
     <h2>📈 Statistik Pengunjung</h2>
-    <p>Melihat jumlah pengunjung website RT.</p>
     <a class="btn" href="https://analytics.google.com" target="_blank">
       Buka Google Analytics
     </a>
@@ -113,7 +158,6 @@
 
   <div class="card">
     <h2>🔍 Google Search Console</h2>
-    <p>Monitoring website RT di hasil pencarian Google.</p>
     <a class="btn" href="https://search.google.com/search-console" target="_blank">
       Buka Search Console
     </a>
@@ -124,6 +168,23 @@
 <footer>
   <p>© 2025 Admin RT 007 RW 002 · Warga Cemplang</p>
 </footer>
+
+</div>
+
+<script>
+  // PASSWORD ADMIN
+  const ADMIN_PASSWORD = "RT007AMAN";
+
+  function login() {
+    const input = document.getElementById("password").value;
+    if (input === ADMIN_PASSWORD) {
+      document.getElementById("login-box").style.display = "none";
+      document.getElementById("admin-content").style.display = "block";
+    } else {
+      alert("Password salah!");
+    }
+  }
+</script>
 
 </body>
 </html>
