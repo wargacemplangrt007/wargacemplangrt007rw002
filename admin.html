@@ -21,6 +21,24 @@
       color: #fff;
       padding: 20px;
       text-align: center;
+      position: relative;
+    }
+
+    .logout {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background: #ef4444;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .logout:hover {
+      background: #dc2626;
     }
 
     main {
@@ -126,6 +144,7 @@
 <header>
   <h1>Halaman Admin RT</h1>
   <p>RT 007 RW 002 · Kampung Cemplang · Cibungbulang</p>
+  <button class="logout" onclick="logout()">Logout</button>
 </header>
 
 <main>
@@ -172,17 +191,36 @@
 </div>
 
 <script>
-  // PASSWORD ADMIN
+  // ====== KONFIG ======
   const ADMIN_PASSWORD = "RT007AMAN";
+  const SESSION_KEY = "admin_logged_in";
 
+  // ====== LOGIN ======
   function login() {
     const input = document.getElementById("password").value;
     if (input === ADMIN_PASSWORD) {
-      document.getElementById("login-box").style.display = "none";
-      document.getElementById("admin-content").style.display = "block";
+      localStorage.setItem(SESSION_KEY, "true");
+      showAdmin();
     } else {
       alert("Password salah!");
     }
+  }
+
+  // ====== LOGOUT ======
+  function logout() {
+    localStorage.removeItem(SESSION_KEY);
+    location.reload();
+  }
+
+  // ====== TAMPILKAN ADMIN JIKA SUDAH LOGIN ======
+  function showAdmin() {
+    document.getElementById("login-box").style.display = "none";
+    document.getElementById("admin-content").style.display = "block";
+  }
+
+  // ====== CEK SESSION SAAT LOAD ======
+  if (localStorage.getItem(SESSION_KEY) === "true") {
+    showAdmin();
   }
 </script>
 
