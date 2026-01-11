@@ -8,26 +8,16 @@
 </head>
 <body>
 
-<section class="section">
-  <h2>🔐 Login Admin RT</h2>
+<section class="card">
+  <h2>Login Admin RT</h2>
 
-  <div id="login-box">
-    <input type="password" id="password" placeholder="Masukkan Password Admin">
-    <button onclick="loginAdmin()">Masuk</button>
-    <p id="login-error" style="color:red;"></p>
-  </div>
+  <input type="password" id="password" placeholder="Password Admin">
+  <button type="button" onclick="loginAdmin()">Masuk</button>
+  <p id="error" style="color:red;"></p>
 
   <div id="admin-panel" style="display:none;">
-    <h3>📝 Tambah Pengumuman RT</h3>
-
-    <input type="text" id="judul" placeholder="Judul Pengumuman">
-    <input type="date" id="tanggal">
-    <textarea id="isi" placeholder="Isi Pengumuman"></textarea>
-
-    <button onclick="simpanPengumuman()">Simpan</button>
-
-    <h3>📢 Preview Pengumuman</h3>
-    <ul id="list-pengumuman"></ul>
+    <h3>Panel Admin Aktif</h3>
+    <p>Gunakan halaman ini untuk pengelolaan internal RT.</p>
   </div>
 </section>
 
