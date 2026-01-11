@@ -1,130 +1,56 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
-  background: #f4f6f8;
-  color: #333;
-  line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
 }
 
-.header {
+.top-header {
   background: #0b3c5d;
-  color: #fff;
-  padding: 20px 10px;
+  color: white;
   text-align: center;
+  padding: 20px;
 }
 
-.navbar {
-  background: #145374;
+.main-nav {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 15px;
+  background: #145374;
+  padding: 10px;
 }
 
-.navbar a {
-  color: #fff;
-  padding: 12px 16px;
+.main-nav a {
+  color: white;
   text-decoration: none;
-}
-
-.navbar a:hover {
-  background: #0b3c5d;
+  font-weight: bold;
 }
 
 .hero {
-  background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
-              url("img/17an-rt/Ft-17an-1.jpg") center/cover no-repeat;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-box {
-  background: rgba(255,255,255,.9);
   padding: 30px;
   text-align: center;
-  border-radius: 10px;
-}
-
-.section {
-  padding: 40px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.section h2 {
-  margin-bottom: 20px;
-  color: #0b3c5d;
-}
-
-.bg-light {
-  background: #fff;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 15px;
 }
 
 .card {
-  background: #e9eef3;
-  padding: 15px;
+  background: white;
+  margin: 20px;
+  padding: 20px;
   border-radius: 8px;
-  text-align: center;
 }
 
-.pengumuman li {
-  margin-bottom: 10px;
-}
-
-.gallery {
+.galeri {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
-  ensure-fit: cover;
-  margin-bottom: 25px;
 }
 
-.gallery img {
+.galeri img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
-iframe {
-  width: 100%;
-  height: 350px;
-  border: 0;
-  border-radius: 10px;
-}
-
-.footer {
-  background: #0b3c5d;
-  color: #fff;
+footer {
   text-align: center;
   padding: 15px;
-  margin-top: 30px;
-}
-input, textarea, button {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-button {
   background: #0b3c5d;
   color: white;
-  cursor: pointer;
 }
-
-button:hover {
-  background: #145374;
-}
-v
